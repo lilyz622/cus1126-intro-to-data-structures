@@ -5,9 +5,9 @@
  */
 
 public class Pets {
-	private String species;
-	private String name;
-	private int ID;
+	protected String species;
+	protected String name;
+	public int ID;
 
 	/**
 	 * constructor assigning species, name, id

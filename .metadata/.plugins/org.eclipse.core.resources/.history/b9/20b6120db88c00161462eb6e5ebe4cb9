@@ -1,0 +1,13 @@
+public class Node {
+	public Object object;
+	public Node link;
+	
+	public Node(Object object){
+		object = new Object();
+	}
+	
+	public String toString(){
+		return object.toString();
+	}
+	
+}

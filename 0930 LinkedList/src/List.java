@@ -1,13 +1,15 @@
 
-public class List {
-	public static Node last=null;
-	public static Node first=null;
+public class List{
+
+	public Node last=null;
+	public Node first=null;
 	
-	public static void insertNode(String fname, String lname, int age){
-		Node newNode = new Node();
-		newNode.firstName = fname;
-		newNode.lastName = lname;
-		newNode.age = age;
+	public List() {
+		super();
+	}
+	
+	public void insertNode(Object object){
+		Node newNode = new Node(object);
 		newNode.link = null;
 		
 		// Check if list is empty
@@ -21,31 +23,20 @@ public class List {
 		}
 	}
 	
-	
-	
-	public static void main(String[] args){
-		// adding elements to list
-		insertNode("Travis","CUS1126",20);
-		insertNode("Chris","CUS1126",21);
-		insertNode("Yi Yi","CUS1126",19);
-		display();
-		deleteNode("Chris","CUS1126",21);
-		first.link = first.link.link;
-		display();
-	}
-	
 	//display the linked list
-	public static void display(){
+	public String toString(){
 		Node current = first;
+		String print = "";
 		while (current!=null){
-			System.out.println(current.firstName+" "+current.toString());
+			print= print+current.object.toString()+"\n";
 			current = current.link;
 		}
-		
+		return print;
 	}
 	
 	//delete node
-	public static void deleteNode(String fname, String lname, int age){
+	public void deleteNode(int key) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
+		Node previous = first;
 		Node current = first;
 		// is the list empty
 		if (current == null){
@@ -53,17 +44,53 @@ public class List {
 			return;
 		}
 		
-		int count = 0;
-		while (current!=null){
-			if (current.age == age){
-				for (int i = 0; i <=count; count++){
-					first.link;
+		if ((Pets) current.object != null){
+			while (current != null){
+				if (((Pets) current.object).ID == key){
+					previous.link = current.link;
 				}
+				previous = current;
+				current = current.link;
 			}
-			count ++;
-			current = current.link;
 		}
+		else{
+			System.out.println("No such key exists");
+		}
+
 	}
+	
+	public Object findNode(int key) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{
+		Node current = first;
+		if ((Pets) current.object != null){
+			while (current != null){
+				if (((Pets) current.object).ID == key){
+					return (Pets) current.object;
+				}
+				current = current.link;
+			}
+		}
+		else{
+			System.out.println("No such key exists");
+		}
+		return null;
+	}
+	
+//	private static Node pointLink(Node beginning, Node next, int count, Node target, int targetCount){
+//		if (count == targetCount){
+//			next = beginning.link;
+//			count--;
+//			beginning.link = next;
+//			return pointLink(beginning, next, count, target, targetCount);
+//		} else {
+//			if (count == 0){
+//				next = next.link.link; // target = current.link
+//				return next;
+//			}
+//			Node nextNext = next.link;
+//			count--;
+//			return pointLink(beginning, nextNext, count, target, targetCount);
+//		}
+//	}
 	
 	
 }
