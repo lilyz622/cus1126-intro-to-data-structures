@@ -11,9 +11,9 @@ public class Pets {
 
 	/**
 	 * constructor assigning species, name, id
-	 * @param s
-	 * @param n
-	 * @param i
+	 * @param s species
+	 * @param n name
+	 * @param i ID
 	 */
 	public Pets (String s, String n, int i){
 		species=s;

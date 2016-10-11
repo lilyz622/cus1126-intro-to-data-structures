@@ -1,0 +1,84 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class MergeSortingArrays {
+	private final static int RANDOM_RANGE = 10000;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.out.println("We create arrays of random integers of varing lengths.");
+
+//		int[] ten = createRandomArray(10);
+//		int[] hundred = createRandomArray(100);
+//		int[] thousand = createRandomArray(1000);
+//		int[] tenThousand = createRandomArray(10000);
+//		int[] hundredThousand = createRandomArray(100000);
+//		mergeSortHelp(ten);
+//		mergeSortHelp(hundred);
+//		mergeSortHelp(thousand);
+//		mergeSortHelp(tenThousand);
+//		mergeSortHelp(hundredThousand);
+		
+		
+		for (int i = 1; i <=3; i++){
+			int arrayLength = (int) Math.pow(10, i);
+			int[] randomArray = createRandomArray(arrayLength);
+			System.out.println("Length "+arrayLength+":"+Arrays.toString(randomArray));
+			System.out.println("Sorted array:"+mergeSortHelp(randomArray));
+			
+		}
+	}
+
+	public static int[] mergeSortHelp(int[] input) {
+		long startTime = System.nanoTime();
+		mergeSort(input, 0, input.length - 1);
+		long estimatedTime = System.nanoTime() - startTime;
+		System.out.println("Estimated time to merge sort array of length 10^"+Math.pow(10, input.length)+" is:"+estimatedTime); 
+		return input;
+	}
+
+	public static void mergeSort(int[] input, int low, int high) {
+		if (low == high){
+			return;
+		}
+		int length = high - low + 1;
+		int pivot = (low + high) / 2;
+		mergeSort(input, low, pivot);
+		mergeSort(input, pivot + 1, high);
+		int working[] = new int[length];
+		for (int i = 0; i < length; i++)
+			working[i] = input[low + i];
+		int m1 = 0;
+		int m2 = pivot - low + 1;
+		for (int i = 0; i < length; i++) {
+			if (m2 <= high - low)
+				if (m1 <= pivot - low)
+					if (working[m1] > working[m2])
+						input[i + low] = working[m2++];
+					else
+						input[i + low] = working[m1++];
+				else
+					input[i + low] = working[m2++];
+			else
+				input[i + low] = working[m1++];
+		}
+	}
+
+	/**
+	 * Creates an array of random integers of size length
+	 * 
+	 * @param length size of array
+	 * @return random array of int
+	 */
+	public static int[] createRandomArray(int length) {
+		int[] output = new int[length];
+		for (int i = 0; i < output.length; i++) {
+			output[i] = (int) (Math.random() * RANDOM_RANGE);
+		}
+		return output;
+	}
+
+}
+
+/*
+ * 9032, 22169, 399856, 1163440, 10560874,
+ */

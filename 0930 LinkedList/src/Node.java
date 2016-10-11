@@ -1,13 +1,9 @@
+/**
+ * Generic Node class with object and link attached to it.
+ * @author yzhan265
+ *
+ */
 public class Node {
 	public Object object;
 	public Node link;
-	
-	public Node(Object object){
-		this.object = object;
-	}
-	
-/*	public String toString(){
-		return object.toString();
-	}*/
-	
 }

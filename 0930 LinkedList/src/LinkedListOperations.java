@@ -1,6 +1,12 @@
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+/**
+ * Description: forms linkedlist with Nodes with objects from the Pets class, and 
+ *    performs operations on them, such as insertion, deletion, and traversal. 
+ * @author yzhan265
+ *
+ */
 
 public class LinkedListOperations {
 	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{

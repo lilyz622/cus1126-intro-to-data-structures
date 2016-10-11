@@ -1,0 +1,7 @@
+1476128995171	Rename local variable 'testArray'
+1476133678949	Rename type 'MergeInsertionThresholdFiner'
+1476153097352	Rename type 'MergeInsertionThresholdFinder'
+1476153119046	Rename type 'SortingComparator'
+1476153131668	Rename type 'MergeVSInsertionSort'
+1476153339832	Rename type 'SortingComparator'
+1476153351003	Rename type 'SortingComparatorTry'

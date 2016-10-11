@@ -1,0 +1,20 @@
+
+public class List {
+	public Node head;
+	public Node tail;
+	public void insertNode(int input){
+		Node newNode = new Node();
+		newNode.info = input;
+		newNode.link = null;
+		Node oldTail = tail;
+		if (head == null){
+			head = newNode;
+			tail = head;
+		} else {
+			tail.link = newNode;
+			tail = newNode;
+		}
+		System.out.println("Head:"+head.info+"\tOld Tail:"+oldTail.info+"\tNew Tail:"+tail.info);
+	}
+
+}
