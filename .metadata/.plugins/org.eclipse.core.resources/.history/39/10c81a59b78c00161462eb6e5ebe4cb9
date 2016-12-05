@@ -1,8 +1,0 @@
-public class Node extends Pets{
-	public Node(String s, String n, int i) {
-		super(s, n, i);
-		// TODO Auto-generated constructor stub
-	}
-	public Node link;
-	
-}

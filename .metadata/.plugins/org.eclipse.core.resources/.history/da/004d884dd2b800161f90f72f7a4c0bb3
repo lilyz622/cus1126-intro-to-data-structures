@@ -1,0 +1,14 @@
+
+public class BT_BST_Tester {
+	public static void main(String[] args)
+	{
+//		BST bst = new BST();
+//		bst.add(100);
+//		bst.inOrderTraverse(bst.root);
+		
+		BT bt = new BT();
+		int[] array = {100,51,151,42,72,82,32,93,43,23,93,23,23};
+		bt.add(array);
+		bt.inOrderTraverse(bt.root);
+	}
+}

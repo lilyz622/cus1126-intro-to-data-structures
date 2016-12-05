@@ -37,5 +37,16 @@ public class List {
 		}
 		System.out.println("The "+count+" node has value:"+temp.info);
 	}
+	
+	public void findEighth(Node current){
+		int count=1;
+		while (count <=8 && current!= null){
+			if (count == 8){
+				System.out.println("The "+count+" node has value:"+current.info);
+			}
+			current = current.link;
+			count++;
+		}
+	}
 
 }

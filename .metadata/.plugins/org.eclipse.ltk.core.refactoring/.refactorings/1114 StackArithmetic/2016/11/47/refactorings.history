@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;exp&apos; in &apos;StackArithmetic.calculate(...)&apos; to &apos;sym&apos;&#x0D;&#x0A;- Original project: &apos;1114 StackArithmetic&apos;&#x0D;&#x0A;- Original element: &apos;StackArithmetic.calculate(Stack, Stack).exp&apos;&#x0D;&#x0A;- Renamed element: &apos;exp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;exp&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{StackArithmetic.java[StackArithmetic~calculate~QStack;~QStack;@exp!787!795!793!795!QStack;!0!true" name="sym" references="true" stamp="1479219634507" version="1.0"/>
+</session>

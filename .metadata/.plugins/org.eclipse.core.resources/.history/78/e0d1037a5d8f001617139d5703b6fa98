@@ -1,4 +1,0 @@
-public class Node {
-	public Object object;
-	public Node link;
-}

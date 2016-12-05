@@ -1,0 +1,43 @@
+/**
+ * Project: Object Matrix Duplicate Finder
+ * 
+ * c) The time complexity of finder all the duplicates is 
+ * 
+ * 
+ * 
+ */
+
+import java.util.Hashtable;
+
+public class Object_Matrix_DuplicateFinder {
+	public static void main(String[] args){
+		Cat[][] array = {
+				{new Cat("A","Yellow", "Green", 30), 
+					new Cat("B", "Black", "Brown", 60), //
+					new Cat("C", "Tabby", "Blue", 20)}, //
+				{new Cat("D","Yellow", "Green", 30), 
+						new Cat("B", "Black", "Brown", 60), //Duplicate
+						new Cat("F", "Tabby", "Blue", 20)},
+				{new Cat("G","Yellow", "Green", 30), 
+							new Cat("H", "Black", "Brown", 60), 
+							new Cat("C", "Tabby", "Blue", 20)} //Duplicate
+		};
+		
+		Hashtable<Cat, Integer> table = new Hashtable();
+		
+		for (int row = 0; row < array.length; row++){
+			for (int column = 0; column < array[0].length; column ++){
+				Cat tempcat = array[row][column];
+				if (table.containsKey(tempcat)){
+					int prevcat = (int) table.get(tempcat);
+					System.out.println(tempcat.name+" at ["+row+","+column+"] is a duplicate of "
+							+ "object at ["+prevcat/array.length+","+prevcat%array.length+"]");
+				}else {
+					table.put(tempcat, row*array.length+column);
+				}
+			}
+		}
+			
+	}
+
+}

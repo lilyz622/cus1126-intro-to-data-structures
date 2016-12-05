@@ -1,0 +1,15 @@
+
+public class GroupAnagram {
+
+	public static void main(String[] args){
+		char a = 'a';
+		int a0 = (int) a;
+		
+		System.out.println(a0+","+((int)'A'));
+		
+		String abc="abc";
+		int abc0=abc.hashCode();
+		int bac0="bac".hashCode();
+		System.out.println(abc0+","+bac0);
+	}
+}

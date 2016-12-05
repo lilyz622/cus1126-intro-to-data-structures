@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;set&apos; in &apos;Object_Matrix_DuplicateFinder.main(...)&apos; to &apos;table&apos;&#x0D;&#x0A;- Original project: &apos;1202 Object Matrix DuplicateFinder&apos;&#x0D;&#x0A;- Original element: &apos;Object_Matrix_DuplicateFinder.main(String[]).set&apos;&#x0D;&#x0A;- Renamed element: &apos;set&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;set&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Object_Matrix_DuplicateFinder.java[Object_Matrix_DuplicateFinder~main~\[QString;@set!761!806!785!787!QHashtable\&lt;QCat;QInteger;&gt;;!0!false" name="table" references="true" stamp="1480731652419" version="1.0"/>
+</session>

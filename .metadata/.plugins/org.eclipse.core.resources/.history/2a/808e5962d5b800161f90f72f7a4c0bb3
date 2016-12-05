@@ -1,0 +1,49 @@
+
+public class BT_BST_Tester {
+	public static void main(String[] args)
+	{
+		BST bst = new BST();
+		int[] array = {100, 51, 151, 42, 72, 182, 142, 93,43,23};
+		bst.add(array);
+		bst.inOrderTraverse(bst.root);
+		System.out.println();
+		
+		BT bt = new BT();
+		bt.add(array);
+		bt.inOrderTraverse(bt.root);
+		System.out.println();
+		
+		System.out.println(bstTest(bst.root));
+		System.out.println(bstTest(bt.root));
+	}
+	
+	public static boolean bstTest(Node root){
+		Node current = root;
+		boolean isBst = true;
+		bstTest(current, isBst);
+		return isBst;
+	}
+	
+	public static void bstTest(Node current, boolean isBst){
+		if (current!= null){
+			
+			if (current.leftChild!= null){
+				if (current.info <= current.leftChild.info){
+					isBst = false;
+					System.out.println("FALSE");
+					return;
+				} 
+				bstTest(current.leftChild, isBst);
+			}
+			System.out.print(current.info+",");
+			if (current.rightChild!= null){
+				if (current.info > current.leftChild.info){
+					isBst = false;
+					System.out.println("FALSE");
+					return;
+				}
+				bstTest(current.rightChild, isBst);
+			}
+		}
+	}
+}

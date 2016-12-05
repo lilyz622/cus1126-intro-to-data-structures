@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+
+public class Trials {
+	public static void main(String[] args){
+		//Q5.b
+		int x=12;
+		int y=10;
+		
+		for (int count = 0; count <=4; count++){
+			System.out.println("Y Value is:"+y++);
+		}
+		
+		//Q2.c
+		ArrayList<String> Alphabet = new ArrayList<String>();
+		Alphabet.add("AB");
+		Alphabet.add("CD");
+		Alphabet.add("EF");
+		Alphabet.add(1, "XYZ");
+		System.out.println(Alphabet.toString());
+		
+		System.out.println((int)'/');
+		
+		x=0b101;
+		y=0b110;
+		int z=x+y;
+
+		System.out.println(x + "+" + y + "=" + z);
+		//5+6=11
+
+		/*
+		* If you want to output in binary format, use Integer.toBinaryString()
+		*/
+
+		System.out.println(Integer.toBinaryString(x) + "+" + Integer.toBinaryString(y)
+		         + "=" + Integer.toBinaryString(z).length());
+		//101+110=1011
+		
+		int count = 0;
+		add(count);
+		System.out.print(count);
+		
+	}
+	
+	public static void add(int i){
+		if (i ==10){
+			return;
+		}
+		i++;
+		add(i);
+		
+	}
+
+}
